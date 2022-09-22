@@ -1,6 +1,6 @@
 <?php   
 session_start();
-echo($_POST['lga']);
+// echo($_POST['lga']);
 
 // function calculateTotalPartyScore ($row){
 //     $total_pdp =0;
@@ -21,7 +21,7 @@ echo($_POST['lga']);
 
 if(isset($_POST['lga'])){
     if($_POST['lga'] == 'all'){
-        include('server/connection.php');
+        include('connection.php');
         $stmt = "SELECT * FROM lga ;";
         $lga= mysqli_query($conn, $stmt );
         $lga_row = $lga->fetch_assoc(); 
@@ -168,15 +168,15 @@ if(isset($_POST['lga'])){
     
     
         }
-        echo"this is the pdp". $total_pdp ;
-        echo"this is the dpp".$total_dpp ;
-        echo"this is the acn".$total_acn ;
-        echo"this is the ppa".$total_ppa ;
-        echo"this is the cdc".$total_cdc ;
-        echo"this is the jp". $total_jp ;
-        echo"this is the anpp".$total_anpp ;
-        echo"this is the labo".$total_labo ;
-        echo"this is the cpp".$total_cpp ;
+        // echo"this is the pdp". $total_pdp ;
+        // echo"this is the dpp".$total_dpp ;
+        // echo"this is the acn".$total_acn ;
+        // echo"this is the ppa".$total_ppa ;
+        // echo"this is the cdc".$total_cdc ;
+        // echo"this is the jp". $total_jp ;
+        // echo"this is the anpp".$total_anpp ;
+        // echo"this is the labo".$total_labo ;
+        // echo"this is the cpp".$total_cpp ;
 
 
 
@@ -185,7 +185,7 @@ if(isset($_POST['lga'])){
 
     }else{
         $submitted_lga_name = $_POST['lga'];
-        include('server/connection.php');
+        include('connection.php');
         $stmt = "SELECT * FROM lga where lga_name = '$submitted_lga_name';";
         $lga= mysqli_query($conn, $stmt );
         $lga_row = $lga->fetch_assoc(); 
@@ -329,15 +329,15 @@ if(isset($_POST['lga'])){
     
         }
     
-        echo"this is the pdp". $total_pdp ;
-        echo"this is the dpp".$total_dpp ;
-        echo"this is the acn".$total_acn ;
-        echo"this is the ppa".$total_ppa ;
-        echo"this is the cdc".$total_cdc ;
-        echo"this is the jp". $total_jp ;
-        echo"this is the anpp".$total_anpp ;
-        echo"this is the labo".$total_labo ;
-        echo"this is the cpp".$total_cpp ;
+        // echo"this is the pdp". $total_pdp ;
+        // echo"this is the dpp".$total_dpp ;
+        // echo"this is the acn".$total_acn ;
+        // echo"this is the ppa".$total_ppa ;
+        // echo"this is the cdc".$total_cdc ;
+        // echo"this is the jp". $total_jp ;
+        // echo"this is the anpp".$total_anpp ;
+        // echo"this is the labo".$total_labo ;
+        // echo"this is the cpp".$total_cpp ;
 
 
 
@@ -385,6 +385,13 @@ header('location:index.php?message=pls select an LGA');
 
 
 <body>
+    <section>
+        <div class="control" style="justify-content: flex-start;">
+            <span style="margin-left: 20px;"><a href="index.php">BACK</a></span>
+
+        </div>
+    </section>
+
 
 
     <!--  -->

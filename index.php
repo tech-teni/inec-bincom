@@ -1,6 +1,6 @@
 <?php
 
-include('server/connection.php');
+include('connection.php');
 
 $stmt = "SELECT * FROM polling_unit;";
 $polling_units= mysqli_query($conn, $stmt );
@@ -58,7 +58,7 @@ $all_lga = mysqli_query($conn, $stmt4 );
     <div class="body">
         <div class="main-box container">
             <div class="heading">
-                <img src="images/inec.jpeg" alt="nimc logo" class="nimc-logo">
+                <img src="inec.jpeg" alt="nimc logo" class="nimc-logo">
                 <div class="mini-heading">
                     <h1>The Independent National Electoral Commission (INEC)</h1>
                     <h3>-vote wisely</h3>
@@ -70,7 +70,7 @@ $all_lga = mysqli_query($conn, $stmt4 );
                 <div class="move">
                     <ul>
                         <li>Home</li>
-                        <li>+ About Us</li>
+                        <li><a href=""></a></li>
                         <li>+ Our Services</li>
                         <li>+Media</li>
                         <li>+ Resources</li>
@@ -78,6 +78,13 @@ $all_lga = mysqli_query($conn, $stmt4 );
                 </div>
                 </ul>
             </nav>
+            <section>
+                <div class="control">
+                    <span><a href="index.php"> main page</a></span>
+                    <span><a href="input_score.php"> input new polling unit</a></span>
+
+                </div>
+            </section>
             <!-- end of nav -->
             <section class="search container">
 
@@ -93,7 +100,8 @@ $all_lga = mysqli_query($conn, $stmt4 );
                             <option value="volvo">Delta</option>
                         </select>
                     </div>
-                    <div class="col-3"> <label for="LGA">LGA</label>
+                    <div class="col-3"> <label for="LGA">LGA <span>(you have to select lga to get the
+                                result)</span></label>
                         <select class="form-control form-control-lg" name="lga" id="cars">
                             <option value="all" selected>All</option>
                             <?php 

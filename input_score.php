@@ -1,5 +1,5 @@
 <?php 
-include('server/connection.php');
+include('connection.php');
 
 if(isset($_POST['submit_btn'])){
 
@@ -53,6 +53,14 @@ if(isset($_POST['submit_btn'])){
 </style>
 
 <body style="background-color:darkgreen; height:100vh;">
+    <section>
+        <div class="control">
+            <span><a href="index.php"> main page</a></span>
+            <span><a href="input_score.php"> input new polling unit</a></span>
+
+        </div>
+    </section>
+
     <div class="container form-container" style="background-color:white;">
         <h2>STORE NEW POLLING UNIT INFORMATION</h2>
         <?php 
